@@ -18,7 +18,7 @@ url <- paste0(
 
 # ---- Import et transformation des données ----
 
-figure1 <- url |>
+figure6 <- url |>
   readSDMX() |>
   as_tibble() |>
   transmute(
@@ -38,7 +38,7 @@ figure1 <- url |>
 
 # ---- Graphique ----
 
-ggplot(figure1, aes(x = date, y = OBS_VALUE, color = TITLE_FR)) +
+ggplot(figure6, aes(x = date, y = OBS_VALUE, color = TITLE_FR)) +
   geom_line(size = 1) +
   scale_color_manual(
     values = viridis(3)[1:2]
@@ -63,6 +63,6 @@ ggplot(figure1, aes(x = date, y = OBS_VALUE, color = TITLE_FR)) +
 
 # ---- Export graphique ----
 
-ggsave("figure1.png", width = 7.5, height = 4.2)
-ggsave("figure1.pdf", width = 7.5, height = 4.2, device = cairo_pdf)
+ggsave("figure6.png", width = 7.5, height = 4.2)
+ggsave("figure6.pdf", width = 7.5, height = 4.2, device = cairo_pdf)
 

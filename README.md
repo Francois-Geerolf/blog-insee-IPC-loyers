@@ -6,14 +6,14 @@ Ce dépôt met à disposition des codes de réplication pour la note en lien [pd
 
 ## Codes de Réplication
 
-### Figure 1: IPC Ensemble vs. IPC loyers effectifs
+### Figure 6: IPC Ensemble vs. IPC loyers effectifs
 
-[Code R](figure1.R)
+[Code R](figure6.R)
 
-![Figure 1](figure1.png)
+![Figure 6](figure6.png)
 
-### Figure 2: Indice des prix des logements anciens, France métropolitaine et Paris
+### Figure 7: Indice des prix des logements anciens, France métropolitaine et Paris
 
-[Code R](figure2.R)
+[Code R](figure7.R)
 
-![Figure 2](figure2.png)
+![Figure 7](figure7.png)
