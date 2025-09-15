@@ -24,7 +24,9 @@ figure7 <- url |>
   as_tibble() |>
   transmute(
     TITLE_FR = str_extract(TITLE_FR, "Paris|France métropolitaine"),
-    TITLE_FR = factor(TITLE_FR, levels = c("Paris", "France métropolitaine")),
+    TITLE_FR = factor(TITLE_FR,
+                      levels = c("Paris", "France métropolitaine"),
+                      labels = c("Paris", "France métropolitaine")),
     date = as.Date(as.yearqtr(TIME_PERIOD, format = "%Y-Q%q")),
     OBS_VALUE = as.numeric(OBS_VALUE)
   ) |>
@@ -39,8 +41,7 @@ figure7 <- url |>
 ggplot(figure7, aes(x = date, y = OBS_VALUE, color = TITLE_FR)) +
   geom_line(size = 1) +
   scale_color_manual(
-    values = viridis(3)[1:2],
-    labels = c("Paris", "France métropolitaine")
+    values = viridis(3)[1:2]
   ) +
   scale_x_date(
     breaks = seq(1998, 2025, 2) |> paste0("-01-01") |> as.Date(),
@@ -61,6 +62,6 @@ ggplot(figure7, aes(x = date, y = OBS_VALUE, color = TITLE_FR)) +
 
 # ---- Export ----
 
-ggsave("figure7.png", width = 7.5, height = 4.2)
+ggsave("figure7.png", width = 7.5, height = 4.2, bg = "white")
 ggsave("figure7.pdf", width = 7.5, height = 4.2, device = cairo_pdf)
 
