@@ -1,4 +1,4 @@
-# Quelques remarques au sujet du Blog de l’Insee du 4 février 2020 « Mais si, l’Insee prend bien en compte le logement dans l’inflation ! »
+# Au sujet du Blog de l’Insee du 4 février 2020 « Mais si, l’Insee prend bien en compte le logement dans l’inflation ! »
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22974076.svg)](https://doi.org/10.5281/zenodo.22974076)
 
